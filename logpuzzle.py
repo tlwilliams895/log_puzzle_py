@@ -14,6 +14,10 @@ HTTP/1.0" 302 528 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US;
 rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"
 """
 
+__author__ = """TL Williams (tlwilliams895)
+            worked with Deidre Boddie and Dessance Chandler to complete
+            assessment; received assistance from Tim La, Q3 Student/Mentor"""
+
 import os
 import re
 import sys
