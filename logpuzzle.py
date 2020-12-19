@@ -21,11 +21,18 @@ import urllib.request
 import argparse
 
 
+<<<<<<< HEAD
 # Create a function to find all URLS containing "puzzle" from the log file
 # The sort_url function will sort through the URLS group to return the
 # proper inclued parts of the URL (host_name, url_group, and four letters)
 def sort_url(x):
     unique_url = re.search(r"-(\w+)-(\w+)\.\w+", x)
+=======
+# The sort_url function will sort through the URLS group to return the
+# proper inclued parts of the URL (host_name, url_group, and four letters)
+def sort_url(x):
+    unique_url = re.search("-(\w+)-(\w+)\.\w+", x)
+>>>>>>> 302da74ff878dd68bf0b45a15817713a592847d2
     if unique_url:
         return unique_url.group(2)
     else:
@@ -47,6 +54,7 @@ def read_urls(filename):
                 url_group = puzzle_url.group(1)
                 if "puzzle" in url_group:
                     # Combine the path from each URL with the server name from
+<<<<<<< HEAD
                     # the filename to form a full URL by providing a key to
                     # the value
                     no_duplicates["https://" + host_name + url_group] = 1
@@ -55,6 +63,13 @@ def read_urls(filename):
         sorted_urls = sorted(no_duplicates.keys(), key=sort_url)
         return sorted_urls
 
+=======
+                    # the filename to form a full URL by providing a key to the value
+                    no_duplicates["https://" + host_name + url_group] = 1
+        # Use sorted method to sort the URL in alphabetical order and without duplicates
+        sorted_urls = sorted(no_duplicates.keys(), key=sort_url)
+        return sorted_urls
+>>>>>>> 302da74ff878dd68bf0b45a15817713a592847d2
 
 def download_images(img_urls, dest_dir):
     """Given the URLs already in the correct order, downloads
@@ -69,19 +84,33 @@ def download_images(img_urls, dest_dir):
     if not os.path.isdir(dest_dir):
         os.makedirs(dest_dir)
     for count, img_name in enumerate(img_urls):
+<<<<<<< HEAD
         # Folder name, img name, stringify the count, and retrieve the dot
         # extension of the URL
         file_name = dest_dir + "/img" + str(count) + img_name[-4:]
         # URLretrieve method will retrieve the photos in a URL into and
         # adds into a temporary folder/directory
+=======
+        # Folder name, img name, stringify the count, and retrieve the dot extension of the URL
+        file_name = dest_dir + "/img" + str(count) + img_name[-4:]
+        # URLretrieve method will retrieve the photos in a URL into and adds 
+        # into a temporary folder/directory
+>>>>>>> 302da74ff878dd68bf0b45a15817713a592847d2
         urllib.request.urlretrieve(img_name, file_name)
         result_url_list.append("img" + str(count) + img_name[-4:])
     # Create HTML file to store all the images in a directory
     with open(dest_dir + "/" + "index.html", "w") as html_file:
+<<<<<<< HEAD
         html_file.write(f'{"<html><body>"}')
         for photo in result_url_list:
             html_file.write(f"<img src={photo}>")
         html_file.write(f'{"</body></html>"}')
+=======
+        html_file.write(f"<html><body>")
+        for photo in result_url_list:
+            html_file.write(f"<img src={photo}>")
+        html_file.write(f"</body></html>")
+>>>>>>> 302da74ff878dd68bf0b45a15817713a592847d2
 
 
 def create_parser():
