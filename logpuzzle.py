@@ -67,7 +67,7 @@ def download_images(img_urls, dest_dir):
     for count, img_name in enumerate(img_urls):
         # Folder name, img name, stringify the count, and retrieve the dot extension of the URL
         file_name = dest_dir + "/img" + str(count) + img_name[-4:]
-        # URLretrieve method will retrieve the photos in a URL into and adds 
+        # URLretrieve method will retrieve the photos in a URL into and adds
         # into a temporary folder/directory
         urllib.request.urlretrieve(img_name, file_name)
         result_url_list.append("img" + str(count) + img_name[-4:])
