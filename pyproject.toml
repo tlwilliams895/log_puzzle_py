@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "log-puzzle-tlwilliams895"
+version = "0.1.0"
+description = "Log Puzzle with Images"
+authors = ["tlwilliams895 <tlwilliams895@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "Using version ^3.1.5 for Django"
+
+[tool.poetry.dev-dependencies]
+ipdb = "Using version ^0.13.4 for ipdb"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
