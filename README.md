@@ -65,9 +65,5 @@ Extend your code to order such URLs properly, and then you should be able to dec
 - You will need an active Internet connection in order to download the images
 - If your socket connection times out within `urllib`, try again
 
-## Submitting your work
-To submit your solution for grading, you will need to create a github [Pull Request (PR)](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).  Refer to the `PR Workflow` article in your course content for details.
-
 ## Credits
 Creative Commons (CC) Attribution: The images used in this puzzle were made available by their owners under the [Creative Commons Attribution 2.5](http://creativecommons.org/licenses/by/2.5/) license, which generously encourages remixes of the content such as this one. The animal image is from the Flickr user `zappowbang` and the place image is from the Flickr user `booleansplit`.
-
